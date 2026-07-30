@@ -13,7 +13,7 @@ window.CURRICULUM_DATA = {
           "done": false,
           "topic": "Introduction",
           "details": "Introduction",
-          "project": "",
+          "project": "Implement Introduction",
           "notes": ""
         },
         {
@@ -300,7 +300,7 @@ window.CURRICULUM_DATA = {
           "done": false,
           "topic": "Introduction",
           "details": "Intro",
-          "project": "",
+          "project": "Implement Introduction",
           "notes": ""
         },
         {

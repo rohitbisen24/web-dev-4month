@@ -544,6 +544,7 @@ th:first-child {
 .topic-cell strong {
   display: block;
   color: var(--ink);
+  transition: all 0.3s ease;
 }
 
 .topic-cell span {
@@ -551,6 +552,122 @@ th:first-child {
   margin-top: 4px;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.task-cell {
+  vertical-align: top;
+  font-weight: 500;
+  color: var(--brand-blue-2);
+  transition: opacity 0.3s ease;
+}
+
+/* Custom Checkbox and Progress Styles */
+.checkbox-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: var(--surface);
+  border: 2px solid var(--line);
+  border-radius: 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.custom-checkbox:hover input ~ .checkmark {
+  border-color: var(--brand-light);
+}
+
+.custom-checkbox input:checked ~ .checkmark {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+  animation: checkmarkBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes checkmarkBounce {
+  0% { transform: scale(0) rotate(45deg); opacity: 0; }
+  50% { transform: scale(1.4) rotate(45deg); opacity: 1; }
+  100% { transform: scale(1) rotate(45deg); opacity: 1; }
+}
+
+tbody tr {
+  transition: background-color 0.4s ease;
+}
+
+.completed-animation {
+  background-color: #f0fdf4 !important;
+}
+
+.completed-animation .topic-cell strong {
+  text-decoration: line-through;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.completed-animation .task-cell {
+  opacity: 0.4;
+}
+
+.module-progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: var(--line);
+  overflow: hidden;
+}
+
+.module-progress-fill {
+  height: 100%;
+  background-color: var(--green);
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.module-progress-text {
+  background: rgba(34, 197, 94, 0.1) !important;
+  color: #16a34a !important;
+  border-color: rgba(34, 197, 94, 0.2) !important;
 }
 
 .empty-state {
@@ -717,6 +834,21 @@ th:first-child {
 
   .lesson-meta {
     justify-content: flex-start;
+  }
+
+  .table-wrap {
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -14px;
+    padding: 0 14px;
+  }
+
+  th, td {
+    padding: 12px 8px;
+    font-size: 0.9rem;
+  }
+
+  .topic-cell span {
+    font-size: 0.82rem;
   }
 }
 
