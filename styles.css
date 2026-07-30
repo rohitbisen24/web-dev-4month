@@ -564,20 +564,26 @@ th:first-child {
 /* Custom Checkbox and Progress Styles */
 .checkbox-cell {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+  padding-top: 12px; /* Slight tweak to match topic text visual baseline */
 }
 
 .custom-checkbox {
   position: relative;
   display: inline-flex;
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  margin-top: 2px;
+}
+
+.serial-num {
+  margin-top: 2px;
 }
 
 .custom-checkbox input {
@@ -592,8 +598,8 @@ th:first-child {
   position: absolute;
   top: 0;
   left: 0;
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
   background-color: var(--surface);
   border: 2px solid var(--line);
   border-radius: 6px;
