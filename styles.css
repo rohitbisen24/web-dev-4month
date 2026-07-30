@@ -43,7 +43,7 @@ input {
 
 .hero {
   position: relative;
-  min-height: 720px;
+  min-height: 570px;
   overflow: hidden;
   background:
     radial-gradient(circle at 88% 72%, rgba(102, 166, 242, 0.16), transparent 28%),
@@ -84,19 +84,18 @@ input {
 
 .topbar {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) auto;
+  grid-template-columns: 240px minmax(0, 1fr);
   align-items: center;
   gap: 28px;
-  padding: 22px 0;
+  padding: 18px 0 8px;
 }
 
 .brand img {
   display: block;
-  width: 184px;
+  width: 172px;
   height: auto;
 }
 
-.nav-links,
 .topbar__actions,
 .hero__actions,
 .icon-button,
@@ -117,20 +116,13 @@ input {
   align-items: center;
 }
 
-.nav-links {
-  justify-content: center;
-  gap: 34px;
-  color: #0c2343;
-  font-weight: 800;
-}
-
-.nav-links span {
-  color: var(--muted);
-}
-
 .topbar__actions,
 .hero__actions {
   gap: 12px;
+}
+
+.topbar__actions {
+  justify-content: flex-end;
 }
 
 .icon-button,
@@ -162,6 +154,12 @@ input {
   box-shadow: 0 8px 18px rgba(0, 71, 171, 0.08);
 }
 
+.icon-button--primary {
+  background: var(--brand-blue);
+  color: #ffffff;
+  border-color: var(--brand-blue);
+}
+
 .icon-button svg,
 .primary-action svg,
 .secondary-action svg,
@@ -177,10 +175,10 @@ input {
 
 .hero__content {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(430px, 1fr);
-  gap: 68px;
+  grid-template-columns: minmax(0, 0.86fr) minmax(390px, 0.95fr);
+  gap: 56px;
   align-items: center;
-  padding: 150px 0 116px;
+  padding: 72px 0 72px;
 }
 
 .hero__text {
@@ -212,7 +210,7 @@ h3 {
 
 h1 {
   max-width: 650px;
-  font-size: 4.2rem;
+  font-size: 3.55rem;
   letter-spacing: 0;
 }
 
@@ -222,9 +220,9 @@ h1::first-line {
 
 .hero__copy {
   max-width: 610px;
-  margin: 24px 0 30px;
+  margin: 18px 0 24px;
   color: #263d5c;
-  font-size: 1.12rem;
+  font-size: 1.05rem;
 }
 
 .primary-action,
@@ -248,7 +246,7 @@ h1::first-line {
 .contact-strip {
   display: grid;
   gap: 10px;
-  margin-top: 28px;
+  margin-top: 22px;
   color: #354761;
   font-weight: 800;
 }
@@ -265,7 +263,7 @@ h1::first-line {
   position: relative;
   align-self: end;
   border: 1px solid var(--line);
-  border-radius: 24px;
+  border-radius: 18px;
   background: #ffffff;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -324,7 +322,7 @@ h1::first-line {
   max-width: calc(100% - 44px);
   padding: 14px 18px;
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.94);
   box-shadow: 0 16px 28px rgba(7, 31, 63, 0.14);
 }
@@ -346,7 +344,7 @@ h1::first-line {
 }
 
 .summary-band {
-  margin-top: -68px;
+  margin-top: 0;
   position: relative;
   z-index: 2;
   padding: 0 28px 44px;
@@ -361,8 +359,8 @@ h1::first-line {
 }
 
 .stat {
-  min-height: 112px;
-  padding: 20px;
+  min-height: 96px;
+  padding: 18px 20px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -374,7 +372,7 @@ h1::first-line {
 .stat strong {
   display: block;
   color: var(--ink);
-  font-size: 2.05rem;
+  font-size: 1.9rem;
   line-height: 1;
 }
 
@@ -396,107 +394,14 @@ h1::first-line {
 .workspace {
   width: min(1220px, calc(100% - 56px));
   margin: 0 auto 54px;
-  display: grid;
-  grid-template-columns: 292px minmax(0, 1fr);
-  gap: 24px;
-  align-items: start;
+  display: block;
 }
 
-.controls,
 .curriculum-panel {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0, 71, 171, 0.06);
-}
-
-.controls {
-  position: sticky;
-  top: 18px;
-  padding: 18px;
-}
-
-.control-block + .control-block {
-  margin-top: 22px;
-}
-
-.control-block label,
-.control-label {
-  display: block;
-  margin-bottom: 9px;
-  color: var(--ink);
-  font-size: 0.86rem;
-  font-weight: 900;
-}
-
-.search-field {
-  gap: 8px;
-  min-height: 44px;
-  padding: 0 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: #fbfdff;
-  color: var(--muted);
-}
-
-.search-field input {
-  width: 100%;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  color: var(--ink);
-}
-
-.segmented {
-  min-height: 42px;
-  padding: 4px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  background: var(--soft-blue);
-}
-
-.segment {
-  flex: 1;
-  min-height: 32px;
-  border: 0;
-  border-radius: 9px;
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-  font-weight: 900;
-}
-
-.segment.is-active {
-  background: #ffffff;
-  color: var(--brand-blue);
-  box-shadow: 0 8px 18px rgba(0, 71, 171, 0.12);
-}
-
-.module-filters {
-  display: grid;
-  gap: 8px;
-}
-
-.module-pill {
-  min-height: 42px;
-  justify-content: space-between;
-  gap: 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 8px 10px;
-  background: #ffffff;
-  color: var(--ink);
-  cursor: pointer;
-  text-align: left;
-}
-
-.module-pill.is-active {
-  border-color: rgba(0, 71, 171, 0.5);
-  background: var(--soft-blue);
-}
-
-.module-pill small {
-  color: var(--muted);
 }
 
 .curriculum-panel {
@@ -602,13 +507,13 @@ h1::first-line {
 
 table {
   width: 100%;
-  min-width: 760px;
+  min-width: 680px;
   border-collapse: collapse;
 }
 
 th,
 td {
-  padding: 12px 14px;
+  padding: 10px 12px;
   border-bottom: 1px solid var(--line);
   text-align: left;
   vertical-align: top;
@@ -712,13 +617,9 @@ th:first-child {
     grid-template-columns: 1fr auto;
   }
 
-  .nav-links {
-    display: none;
-  }
-
   .hero__content {
     grid-template-columns: 1fr;
-    padding-top: 92px;
+    padding-top: 42px;
   }
 
   .hero__text {
@@ -733,13 +634,6 @@ th:first-child {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .workspace {
-    grid-template-columns: 1fr;
-  }
-
-  .controls {
-    position: static;
-  }
 }
 
 @media (max-width: 640px) {
@@ -757,7 +651,7 @@ th:first-child {
   }
 
   .brand img {
-    width: 158px;
+    width: 150px;
   }
 
   .topbar__actions,
@@ -777,11 +671,11 @@ th:first-child {
   }
 
   h1 {
-    font-size: 2.45rem;
+    font-size: 2.25rem;
   }
 
   .hero__content {
-    padding-top: 62px;
+    padding-top: 36px;
     gap: 34px;
   }
 
@@ -802,7 +696,7 @@ th:first-child {
   }
 
   .summary-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .panel-heading,
@@ -814,7 +708,7 @@ th:first-child {
   }
 
   .curriculum-panel {
-    padding: 18px;
+    padding: 14px;
   }
 
   .module-header {
@@ -828,7 +722,6 @@ th:first-child {
 
 @media print {
   .hero,
-  .controls,
   .footer,
   .topbar__actions,
   .floating-contact {
