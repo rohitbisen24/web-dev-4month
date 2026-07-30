@@ -62,12 +62,14 @@
 
         return `
           <tr class="${isChecked ? 'completed-animation' : ''}" data-module-index="${moduleIndex}">
-            <td class="checkbox-cell">
-              <label class="custom-checkbox">
-                <input type="checkbox" class="topic-checkbox" data-id="${id}" ${isChecked} />
-                <span class="checkmark"></span>
-              </label>
-              <span class="serial-num">${escapeHtml(lesson.serial)}</span>
+            <td class="checkbox-wrapper">
+              <div class="checkbox-cell">
+                <label class="custom-checkbox">
+                  <input type="checkbox" class="topic-checkbox" data-id="${id}" ${isChecked} />
+                  <span class="checkmark"></span>
+                </label>
+                <span class="serial-num">${escapeHtml(lesson.serial)}</span>
+              </div>
             </td>
             <td class="topic-cell">
               <strong>${escapeHtml(lesson.topic || detailText)}</strong>

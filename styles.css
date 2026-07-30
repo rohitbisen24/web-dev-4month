@@ -561,12 +561,10 @@ th:first-child {
   transition: opacity 0.3s ease;
 }
 
-/* Custom Checkbox and Progress Styles */
 .checkbox-cell {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  padding-top: 12px; /* Slight tweak to match topic text visual baseline */
 }
 
 .custom-checkbox {
