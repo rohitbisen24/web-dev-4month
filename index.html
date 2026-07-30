@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Shareable web development curriculum for teachers and students with PDF download."
+    />
+    <title>Connect Shiksha Coding Classes | Web Development Curriculum</title>
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="Connect Shiksha Coding Classes">
+          <img src="assets/Connect Shiksha Logo.png" alt="Connect Shiksha" />
+        </a>
+        <div class="nav-links" aria-label="Contact details">
+          <a href="tel:7748893097">7748893097</a>
+          <a href="tel:9131782103">9131782103</a>
+          <span>Balaghat</span>
+        </div>
+        <div class="topbar__actions">
+          <a class="icon-button" href="web-development-curriculum.pdf" download>
+            <i data-lucide="download"></i>
+            <span>PDF</span>
+          </a>
+          <button class="icon-button" id="printButton" type="button">
+            <i data-lucide="printer"></i>
+            <span>Print</span>
+          </button>
+        </div>
+      </nav>
+
+      <section class="hero__content" id="top">
+        <div class="hero__text">
+          <p class="eyebrow">
+            <i data-lucide="sparkles"></i>
+            Connect Shiksha Coding Classes
+          </p>
+          <h1>Web Development Curriculum</h1>
+          <p class="hero__copy">
+            A student-ready roadmap for HTML5, CSS3, JavaScript, React JS, and
+            Backend development. Designed for classroom teaching, student
+            sharing, revision, and project practice.
+          </p>
+          <div class="hero__actions">
+            <a class="primary-action" href="#curriculum">
+              <i data-lucide="book-open"></i>
+              <span>Open Curriculum</span>
+            </a>
+            <a class="secondary-action" href="web-development-curriculum.pdf" download>
+              <i data-lucide="file-down"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+          <div class="contact-strip">
+            <span><i data-lucide="phone"></i> 7748893097 | 9131782103</span>
+            <span>
+              <i data-lucide="map-pin"></i>
+              In Front of Shindhu Bhawan, Gondia Road, Balaghat
+            </span>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Curriculum preview">
+          <div class="browser-bar">
+            <span></span><span></span><span></span>
+            <p>connectshiksha.com/coding-curriculum</p>
+          </div>
+          <img src="assets/hero-coding-classroom.png" alt="Coding classroom preview" />
+          <div class="launch-card">
+            <img src="assets/Connect Shiksha Icon.png" alt="" />
+            <div>
+              <strong>Ready to Learn</strong>
+              <span>Web development batch roadmap</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="summary-band" aria-label="Curriculum summary">
+        <div class="summary-grid" id="summaryGrid"></div>
+      </section>
+
+      <section class="workspace" id="curriculum">
+        <aside class="controls" aria-label="Curriculum controls">
+          <div class="control-block">
+            <label for="searchInput">Search lessons</label>
+            <div class="search-field">
+              <i data-lucide="search"></i>
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Topic, project, concept..."
+                autocomplete="off"
+              />
+            </div>
+          </div>
+
+          <div class="control-block">
+            <span class="control-label">Mode</span>
+            <div class="segmented" role="group" aria-label="View mode">
+              <button class="segment is-active" type="button" data-mode="student">
+                Student
+              </button>
+              <button class="segment" type="button" data-mode="teacher">
+                Teacher
+              </button>
+            </div>
+          </div>
+
+          <div class="control-block">
+            <span class="control-label">Modules</span>
+            <div class="module-filters" id="moduleFilters"></div>
+          </div>
+        </aside>
+
+        <section class="curriculum-panel" aria-live="polite">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Full roadmap</p>
+              <h2>Lesson Plan</h2>
+            </div>
+            <p id="resultCount" class="result-count"></p>
+          </div>
+          <div id="moduleList" class="module-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <a class="floating-contact" href="tel:7748893097" aria-label="Call Connect Shiksha">
+      <i data-lucide="phone-call"></i>
+    </a>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <img src="assets/Connect Shiksha Logo.png" alt="Connect Shiksha" />
+        <p>Connect Shiksha Coding Classes</p>
+      </div>
+      <div>
+        <p>7748893097 | 9131782103</p>
+        <p>In Front of Shindhu Bhawan, Gondia Road, Balaghat</p>
+      </div>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="curriculum-data.js"></script>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", () => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      });
+    </script>
+  </body>
+</html>

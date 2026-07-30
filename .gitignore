@@ -1,0 +1,10 @@
+.netlify/
+tmp/
+test-results/
+output/
+dist/
+
+# Source/export scratch files used while building the curriculum.
+google_sheet_export.xlsx
+extracted_google_sheet_data.txt
+extracted_google_sheet_data.txtx
