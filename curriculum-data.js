@@ -5,7 +5,7 @@ window.CURRICULUM_DATA = {
   "modules": [
     {
       "title": "HTML5",
-      "totalTopics": "35",
+      "totalTopics": "36",
       "capstoneProject": "Netflix Website",
       "lessons": [
         {
@@ -287,12 +287,20 @@ window.CURRICULUM_DATA = {
           "details": "Summary",
           "project": "Questions and doubts",
           "notes": ""
+        },
+        {
+          "serial": "36",
+          "done": false,
+          "topic": "HTML5 Module Test",
+          "details": "Module End Test",
+          "project": "Test Assessment",
+          "notes": ""
         }
       ]
     },
     {
       "title": "CSS3",
-      "totalTopics": "30",
+      "totalTopics": "32",
       "capstoneProject": "Portfolio Website",
       "lessons": [
         {
@@ -542,12 +550,20 @@ window.CURRICULUM_DATA = {
           "details": "Summary",
           "project": "Questions And Dubtes",
           "notes": ""
+        },
+        {
+          "serial": "32",
+          "done": false,
+          "topic": "CSS3 Module Test",
+          "details": "Module End Test",
+          "project": "Test Assessment",
+          "notes": ""
         }
       ]
     },
     {
       "title": "Basic Javascript",
-      "totalTopics": "35",
+      "totalTopics": "36",
       "capstoneProject": "Portfolio Website",
       "lessons": [
         {
@@ -829,12 +845,20 @@ window.CURRICULUM_DATA = {
           "details": "",
           "project": "JS Web Page",
           "notes": ""
+        },
+        {
+          "serial": "36",
+          "done": false,
+          "topic": "Basic Javascript Module Test",
+          "details": "Module End Test",
+          "project": "Test Assessment",
+          "notes": ""
         }
       ]
     },
     {
       "title": "Advance Javascript",
-      "totalTopics": "15",
+      "totalTopics": "16",
       "capstoneProject": "Quiz Game",
       "lessons": [
         {
@@ -956,12 +980,20 @@ window.CURRICULUM_DATA = {
           "details": "event listeners, arrays, if-else",
           "project": "Quiz Game",
           "notes": ""
+        },
+        {
+          "serial": "16",
+          "done": false,
+          "topic": "Advance Javascript Module Test",
+          "details": "Module End Test",
+          "project": "Test Assessment",
+          "notes": ""
         }
       ]
     },
     {
       "title": "React JS",
-      "totalTopics": "15",
+      "totalTopics": "16",
       "capstoneProject": "Live Link Generation",
       "lessons": [
         {
@@ -1083,12 +1115,20 @@ window.CURRICULUM_DATA = {
           "details": "npm run build, Netlify/Vercel Upload",
           "project": "Live Link Generation",
           "notes": ""
+        },
+        {
+          "serial": "16",
+          "done": false,
+          "topic": "React JS Module Test",
+          "details": "Module End Test",
+          "project": "Test Assessment",
+          "notes": ""
         }
       ]
     },
     {
       "title": "Backend",
-      "totalTopics": "10",
+      "totalTopics": "11",
       "capstoneProject": "Program",
       "lessons": [
         {
@@ -1169,6 +1209,14 @@ window.CURRICULUM_DATA = {
           "topic": "Final Full Stack Project",
           "details": "",
           "project": "Program",
+          "notes": ""
+        },
+        {
+          "serial": "11",
+          "done": false,
+          "topic": "Backend Module Test",
+          "details": "Module End Test",
+          "project": "Test Assessment",
           "notes": ""
         }
       ]
